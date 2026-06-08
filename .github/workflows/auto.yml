@@ -1,60 +1,70 @@
-name: "Refresh Packages"
+name: "refresh"
 
 on:
-  push:
-    paths:
-      - 'debs/**' # 只有当 debs 文件夹内有新的 .deb 插件上传或修改时，才触发此脚本
-  workflow_dispatch: # 允许你在 GitHub 网页端手动点击按钮触发刷新
-
-# 显式声明赋予脚本对仓库的写入权限，防止 Push 时报 Permission Denied 错误
-permissions:
-  contents: write
-  pages: write
-  id-token: write
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types: 
+      - completed
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 完整拉取分支历史，确保 git push 顺畅
+          submodules: recursive
+          token: ${{ secrets.PAT_TOKEN }}  # 确保与 GitHub Secrets 中的名称一致
 
-      - name: Install Debian Package Tools
+      - name: Install Dependencies
+        if: success()
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y dpkg-dev bzip2 xz-utils zstd
+          sudo apt update -qq
+          sudo apt install dpkg-dev bzip2 xz-utils zstd -y
 
-      - name: Generate Sileo Package Index
+      - name: Refresh Packages
+        if: success()
         run: |
-          # 1. 先安全清理旧的索引文件，防止残留干扰
-          rm -f ./Packages ./Packages.bz2 ./Packages.xz ./Packages.zst
-          
-          # 2. 核心：扫描 debs 目录，生成标准的 Packages 索引
-          dpkg-scanpackages -m ./debs /dev/null > ./Packages
-          
-          # 3. 制作各种越狱包管理器需要的压缩格式（全面兼容 Sileo, Zebra, Cydia）
-          bzip2 -c -9 ./Packages > ./Packages.bz2
-          xz -c -9 --extreme ./Packages > ./Packages.xz
-          zstd -c -19 ./Packages > ./Packages.zst
-          
-          echo "✅ 越狱源索引文件全部生成成功！"
+          rm -rf ./Packages*
+          dpkg-scanpackages -m ./debs /dev/null >./Packages
+          bzip2 -v -k -9 Packages
+          xz -v -k -9 --extreme Packages
+          zstd --ultra -22 -k Packages -o Packages.zst
 
-      - name: Configure Git Bot
+      - name: Configure Git
+        if: success()
         run: |
           git config --global user.email 'action@github.com'
-          git config --global user.name 'GitHub Action Bot'
+          git config --global user.name 'GitHub Action'
 
-      - name: Commit and Push Changes
+      - name: Commit Changes
+        if: success()
         run: |
-          # 将生成的四个核心索引文件强行加入暂存区
-          git add Packages Packages.bz2 Packages.xz Packages.zst
-          
-          # 检查文件是否有实际变动，有变动则提交并推送到 main 分支
-          if git diff --staged --quiet; then
-            echo "没有检测到索引文件变化，跳过推送。"
-          else
-            git commit -m 'Release: Auto-refresh Packages index [skip ci]'
-            git push origin HEAD:main
+          git add .
+          if ! git diff --staged --exit-code 1>>/dev/null; then
+            git commit -m 'Refresh Packages'
           fi
+
+      - name: Push Changes
+        if: success() && github.ref == 'refs/heads/main'  # 确保在主分支上推送
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}  # 确保与 GitHub Secrets 中的名称一致
+        run: |
+          # 使用 PAT 进行身份验证
+          git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git push origin main  # 根据实际分支名称修改，例如 main 或 master
+
+      - name: Download remove_all_actions
+        if: success()
+        run: |
+          sudo curl -L -o '/usr/bin/remove_all_actions' 'https://raw.githubusercontent.com/invalidunit/action/main/remove_all_actions'
+          sudo chmod -R 0755 '/usr/bin/remove_all_actions'
+
+      - name: Remove All Old Actions
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # 使用 PAT 替代默认的 GITHUB_TOKEN
+          GH_REPO: ${{ github.repository }}
+        run: |
+          remove_all_actions
