@@ -1,0 +1,54 @@
+Package: com.nathan.gridswitcher
+Version: 1.0.3
+Architecture: iphoneos-arm64e
+Maintainer: iZJ
+Installed-Size: 168
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.nathan.gridswitcher_1.0.3_iphoneos-arm64e.deb
+Size: 4096
+MD5sum: f9321e34a7e8fda3311fc6f98d3e5773
+SHA1: a9ad6be39a8e23541f787b1f2817dd18831e66e5
+SHA256: b14b380f1a770d750c0ae1f19e1c21df97575ff35cd992853ea4072242136659
+Section: 任务界面
+Description: 在iPhone上启用iPad网格切换器。
+Author: Nathan Senter
+Icon: https://s1.imagehub.cc/images/2025/08/18/f78bb707db6fc3170ef7e00022645165.png
+Name: gridswitcher
+
+Package: com.sini921.quickappskill
+Version: 0.0.1-9
+Architecture: iphoneos-arm64e
+Maintainer: iZJ
+Installed-Size: 508
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.sini921.quickappskill_0.0.1-9_iphoneos-arm64e.deb
+Size: 58376
+MD5sum: 79be9c9b438c661e63d68c5bbcd6877a
+SHA1: de0d91c4da3b19dafd870b5db91e77df7d9b5548
+SHA256: 1307983074436ee02899e4cb34600fe87553a6daa89f5ecd3ef362d0e742cf03
+Section: 任务界面
+Description: 在后台界面添加一个清除所有App的按钮
+Author: SINI
+Icon: https://sini921.github.io/repo/sileodepiction/icon/quickappskill.png
+Name: QuickAppsKill(rootless)
+Sileodepiction: https://sini921.github.io/repo/sileodepiction/quickappskill/js.json
+
+Package: netskao.killapps-rootless
+Version: 1.2-2
+Architecture: iphoneos-arm64e
+Maintainer: iZJ
+Installed-Size: 2160
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 15.0), mobilesubstrate, preferenceloader
+Filename: ./debs/netskao.killapps-rootless_1.2-2_iphoneos-arm64e.deb
+Size: 934596
+MD5sum: 0edf66b498c2d4edeb8858cd9ba9a619
+SHA1: 7d1fbc2e5a57631077f7c22ec98f4bdcc3b338d9
+SHA256: c686d21ddafbb1efc04ae4abc184aa0d1ea92b6232d1c1db851cd92e6420ea08
+Section: Netskao-Tweaks
+Description: 长按后台卡片清除所有后台、上滑黑名单等等，iZJ只用它的上滑黑名单功能。
+Author: Netskao
+Name: KillApps-Rootless
+
