@@ -1,3 +1,42 @@
+Package: apt.cydiakk.backgrounderaction15-rootless
+Version: 0.1.0
+Architecture: iphoneos-arm64e
+Maintainer: Cydiakk中文源™ <admin@cydiakk.com>
+Installed-Size: 340
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate, com.opa334.ccsupport
+Filename: ./debs/apt.cydiakk.backgrounderaction15-rootless_0.1.0_iphoneos-arm64e.deb
+Size: 11560
+MD5sum: 7fd8724c3f557e6a61854dc4a739a3a9
+SHA1: 8078982117a6e12979afa50698fa5551aa0b181b
+SHA256: 385f2cfe9b07745208029a2afd6870b6e8d38d25a1966a03258f8b5d71559b7b
+Section: 真后台相关
+Description: 点开一个APP，控制中心点击按钮即可
+Author: @akusio_RR
+Icon: file:///Applications/Cydia.app/Sections/Tweaks.png
+Name: CCSupport真后台
+Sponsor: Cydiakk中文源™ <https://apt.cydiakk.com/>
+
+Package: apt.cydiakk.backgrounderaction15autostate-rootless
+Version: 1.0.3
+Architecture: iphoneos-arm64e
+Maintainer: Cydiakk中文源™ <admin@cydiakk.com>
+Installed-Size: 384
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: apt.cydiakk.backgrounderaction15-rootless, com.opa334.altlist
+Conflicts: byg.iosios.net.backgrounderaction15autostate, byg.iosios.net.backgrounderaction15
+Filename: ./debs/apt.cydiakk.backgrounderaction15autostate-rootless_1.0.3_iphoneos-arm64e.deb
+Size: 28204
+MD5sum: 1bd16d7835b1278d57b31512d46250ab
+SHA1: d507b1968b0d9c72b5f74c77391e28858614d1be
+SHA256: c5a50a676b734e1116dac8d104e5123aed60c7a4f80b0b89de6233a06b967aef
+Section: 真后台相关
+Description: 一款自动真后台插件，配合里的真后台插件，实现打开某个APP自动设置真后台效果，无需复杂的操作！非常好用！
+Author: 0xkuj
+Icon: file:///Applications/Cydia.app/Sections/Tweaks.png
+Name: AutoState自动真后台
+Sponsor: Cydiakk中文源™ <https://apt.cydiakk.com/>
+
 Package: com.nathan.gridswitcher
 Version: 1.0.3
 Architecture: iphoneos-arm64e
@@ -34,6 +73,24 @@ Author: SINI
 Icon: https://sini921.github.io/repo/sileodepiction/icon/quickappskill.png
 Name: QuickAppsKill(rootless)
 Sileodepiction: https://sini921.github.io/repo/sileodepiction/quickappskill/js.json
+
+Package: com.wkk.immortalizer
+Version: 2.0.1
+Architecture: iphoneos-arm64
+Maintainer: sergy & daodao
+Installed-Size: 660
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, com.opa334.ccsupport
+Conflicts: com.sergy.immortalizer
+Filename: ./debs/com.wkk.immortalizer_2.0.1_iphoneos-arm64.deb
+Size: 49312
+MD5sum: 2ebcf4864c45f23ef6a54056bd1e8391
+SHA1: 6132f88488471d16bf0d04b91f8537b913b9c447
+SHA256: 024d39e820d4776a284105fa5f6722ff4174ba74a6bf09972019d17f86e40caa
+Section: 真后台相关
+Description: 可将应用置于前台，达到真后台效果，应用图标长按菜单 —— 开启/禁用「真后台」CC模块控制，需先打开要控制的app，然后控制中心点击模块即可。
+Author: sergy
+Icon: https://s1.imagehub.cc/images/2025/01/07/da88b1cfbc41a40634e3396891d98dc6.png
+Name: Immortalizer
 
 Package: com.wkk.tweaktool
 Version: 2.0.0-beta
