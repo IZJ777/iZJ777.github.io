@@ -37,6 +37,23 @@ Icon: file:///Applications/Cydia.app/Sections/Tweaks.png
 Name: AutoState自动真后台
 Sponsor: Cydiakk中文源™ <https://apt.cydiakk.com/>
 
+Package: com.0xkuj.filzadirprobe
+Version: 1.7.2
+Architecture: iphoneos-arm64e
+Maintainer: 0xkuj
+Installed-Size: 240
+Pre-Depends: rootless-compat (>= 0.9)
+Filename: ./debs/com.0xkuj.filzadirprobe_1.7.2_iphoneos-arm64e.deb
+Size: 71868
+MD5sum: 86da8ca2ca3cdeef7b7883a8d2e400f8
+SHA1: d151d6825209d97c309d278deefd020451419d1c
+SHA256: c199b18727b631f3898623db9d244f42bed442105088529cd5ade74b3f6d4e32
+Section: Filza
+Description: 计算Filza里文件夹大小。
+Author: 0xkuj
+Icon: https://s1.imagehub.cc/images/2025/04/02/754b2bb601bad95dca5cb982e7d926af.jpeg
+Name: FilzaDirProbe
+
 Package: com.nathan.gridswitcher
 Version: 1.0.3
 Architecture: iphoneos-arm64e
@@ -54,6 +71,24 @@ Description: 在iPhone上启用iPad网格切换器。
 Author: Nathan Senter
 Icon: https://s1.imagehub.cc/images/2025/08/18/f78bb707db6fc3170ef7e00022645165.png
 Name: gridswitcher
+
+Package: com.netskao.filzacrack
+Version: 1.1-9
+Architecture: iphoneos-arm64e
+Maintainer: Nets
+Installed-Size: 120
+Pre-Depends: rootless-compat (>= 0.9)
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/com.netskao.filzacrack_1.1-9_iphoneos-arm64e.deb
+Size: 28892
+MD5sum: 091fff4a033fc2f16af86bd3656e9183
+SHA1: 70eb6719c6b4c0370050343b4601784f5e719bb3
+SHA256: 47f7f963ba182efa0abae412107be4b5902ea6dc6ff4fad77a9a232de7f67b2a
+Section: Filza
+Description: Filza Crack
+Author: Netskao
+Name: Filza Crack-roothide
+Sileodepiction: https://jailrepo.initnil.com/api?Package=com.netskao.filzacrack
 
 Package: com.sini921.quickappskill
 Version: 0.0.1-9
@@ -73,6 +108,41 @@ Author: SINI
 Icon: https://sini921.github.io/repo/sileodepiction/icon/quickappskill.png
 Name: QuickAppsKill(rootless)
 Sileodepiction: https://sini921.github.io/repo/sileodepiction/quickappskill/js.json
+
+Package: com.tigisoftware.filza64bit
+Version: 4.0.1-4~roothide
+Architecture: iphoneos-arm64e
+Maintainer: TIGI Software
+Pre-Depends: patches-com.tigisoftware.filza64bit (= 4.0.1-4~roothide)
+Recommends: zip, unzip, gzip, p7zip, unrar, xz-utils
+Conflicts: com.tigisoftware.filza, com.tigisoftware.filza39
+Filename: ./debs/com.tigisoftware.filza64bit_4.0.1-4~roothide_iphoneos-arm64e.deb
+Size: 6973484
+MD5sum: f09396710d355d4baad9448688b27d5f
+SHA1: 907c95dc37736311ffe8cb1fce390e2b1ce7bbe0
+SHA256: 1179833f19f617ad851607827f4e094ddd11b6356b9d1d07ea7290202220afe5
+Section: Filza
+Description: File Manager for iPhone, iPad, iPod Touch. Supports iOS 11+. This version only supports 64-bit devices
+Author: TIGI Software
+Name: Filza File Manager 64-bit
+
+Package: com.wkk.filzaswipeselect
+Version: 0.0.2
+Architecture: iphoneos-arm64e
+Maintainer: korboy <korboybeats@gmail.com>
+Installed-Size: 184
+Pre-Depends: rootless-compat (>= 0.9)
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.wkk.filzaswipeselect_0.0.2_iphoneos-arm64e.deb
+Size: 47596
+MD5sum: a497c8d9c7af653ab0a387439ccc7342
+SHA1: 13f5ff67936f5f3eca83b437becafc7c1126b5b6
+SHA256: 0861928b2293ff669cbaa96571ca10442524ad38cd7e1535a35207a756ce5693
+Section: Filza
+Description: Filza的滑动多选功能。
+Author: korboy <korboybeats@gmail.com>
+Icon: https://sini921.github.io/repo/sileodepiction/icon/filzaswipeselect.png
+Name: FilzaSwipeSelect
 
 Package: com.wkk.immortalizer
 Version: 2.0.1
@@ -99,12 +169,12 @@ Maintainer: iZJ
 Pre-Depends: rootless-compat(>= 0.9)
 Depends: sudo, bash (>= 5.0.3-2), coreutils (>= 8.31-1), grep (>= 3.1-1), sed (>= 4.5-1), gawk (>= 4.2.1-1), tar (>= 1.33-1)
 Filename: ./debs/com.wkk.tweaktool_2.0.0-beta_iphoneos-arm64e.deb
-Size: 11172
-MD5sum: b59dc8b44ec75211635ab5b1091ee2f1
-SHA1: 442888d410849821b260b97a97c7b8b053195a1c
-SHA256: 5b5e1fe7626be9f1b7900d69b3a4857df85d0d8241306275f3b1aaf83f3e3fcf
+Size: 11244
+MD5sum: 9a4a01f4a512d55f5c33093f3fe4b55c
+SHA1: 4a4127ecbf9fa1046b5761709d244c7cf1a6aabd
+SHA256: 3fa99d022a1db00416f48d2b3004c11ed4881cdaa39115841f3f4cfcf5bcba5e
 Section: 配置插件备份工具
-Description: 使用方法：Filza进入/var/mobile/Documents/tweak_tool/目录，运行“一键备份和恢复工具.sh”文件。
+Description: 使用方法：Filza进入/var/mobile/Documents/tweak_tool/目录，运行“一键备份和恢复工具.sh”文件。它是备份至.jb目录下，清除越狱之前一定要复制一份到非越狱.jb目录下。
 Author: 预言小猫
 Icon: https://s1.imagehub.cc/images/2025/01/10/0458f7f83190b2b17070085595312c2b.jpeg
 Name: 一键备份和恢复工具
@@ -125,4 +195,23 @@ Section: 任务界面
 Description: 长按后台卡片清除所有后台、上滑黑名单等等，iZJ只用它的上滑黑名单功能。
 Author: Netskao
 Name: KillApps-Rootless
+
+Package: roothide.patches.filza
+Version: 0.5-4
+Architecture: iphoneos-arm64e
+Maintainer: roothide
+Installed-Size: 268
+Depends: com.roothide.patchloader
+Recommends: com.tigisoftware.filza64bit (= 4.0.1-4~roothide)
+Conflicts: com.tigisoftware.filza64bit (>> 4.0.1-4~roothide), com.tigisoftware.filza64bit (<< 4.0.1-4~roothide)
+Provides: patches-com.tigisoftware.filza64bit (= 4.0.1-4~roothide)
+Filename: ./debs/roothide.patches.filza_0.5-4_iphoneos-arm64e.deb
+Size: 31040
+MD5sum: 168670c8e998af4a1d6b59747c5ccabc
+SHA1: 4dd7dd5946781f7844fa2756adbaa618162b2460
+SHA256: 7ea8571a336438a8595abd7bcdd764ceea756673c4325a0f816abb9d571cd957
+Section: Filza
+Description: RootHide Dynamic Patches For Filza
+Author: roothide
+Name: Patches for Filza 64bit
 
