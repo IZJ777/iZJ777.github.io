@@ -296,12 +296,12 @@ Installed-Size: 2160
 Pre-Depends: rootless-compat(>= 0.9)
 Depends: firmware (>= 15.0), mobilesubstrate, preferenceloader
 Filename: ./debs/netskao.killapps-rootless_1.2-2_iphoneos-arm64e.deb
-Size: 934572
-MD5sum: c0af7cf23658c3d97c3d834d75ef4232
-SHA1: e715fa20afc5935acfe19a15bb6291346a769749
-SHA256: 183c6f87530bbdd94bdb698a2e5128d524397b1a32c1940e2daa7fd252de01ee
+Size: 934844
+MD5sum: 9335db4b89c4e39dfeedc675c5831bec
+SHA1: 775f2a6f517bec05b4133cc5daf04c52e9cb244a
+SHA256: af38bc9d13b1c741a2487abd44aef423a3161f143b7468e6dbdea46b8943d84c
 Section: 任务界面
-Description: 长按后台卡片清除所有后台、上滑黑名单等等，iZJ只用它的上滑黑名单功能。
+Description: 长按后台卡片清除所有后台、上滑黑名单等等，iZJ只用它的上滑黑名单功能。但是这个插件是netskao很久之前的，并且退网很久了，未适配roothide，即使转换为roothide安装能用，也大概率不定时安全模式或者手机卡死看门狗超时。
 Author: Netskao
 Name: KillApps-Rootless
 
