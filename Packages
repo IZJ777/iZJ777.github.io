@@ -391,6 +391,23 @@ Description: 相册增强(无永久删除功能，此功能用电话助手)
 Author: wkk
 Name: PhotoX
 
+Package: com.wkk.proxysc
+Version: 1.0
+Architecture: iphoneos-arm64e
+Maintainer: 网络资源
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: sudo, bash (>= 5.0.3-2), coreutils (>= 8.31-1), grep (>= 3.1-1), sed (>= 4.5-1), gawk (>= 4.2.1-1), tar (>= 1.33-1)
+Filename: ./debs/com.wkk.proxysc_1.0_iphoneos-arm64e.deb
+Size: 38116
+MD5sum: 65da9adf7240fe1244b3065c14cf1e96
+SHA1: 1493a4aded34db72321e5a062af789d603f6d9eb
+SHA256: d4c52a76997752f16862b05d6d52a934841c95d5763100681e65d681dc423b93
+Section: 去录屏截图检测
+Description: 下载后脚本文件在/var/mobile/Documents/自行使用。
+Author: 网络资源
+Icon: https://s1.imagehub.cc/images/2025/01/10/0458f7f83190b2b17070085595312c2b.jpeg
+Name: 去App录屏检测（下载后TrollFools注入）
+
 Package: com.wkk.settingswidgets
 Version: 1.2.2
 Architecture: iphoneos-arm64e
