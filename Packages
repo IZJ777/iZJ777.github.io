@@ -54,6 +54,22 @@ Author: 0xkuj
 Icon: https://s1.imagehub.cc/images/2025/04/02/754b2bb601bad95dca5cb982e7d926af.jpeg
 Name: FilzaDirProbe
 
+Package: com.82flex.unseen
+Version: 0.0.2
+Architecture: iphoneos-arm64e
+Maintainer: 82flex
+Installed-Size: 484
+Depends: firmware (>= 15.0), preferenceloader
+Filename: ./debs/com.82flex.unseen_0.0.2_iphoneos-arm64e.deb
+Size: 43344
+MD5sum: 1439171511be328b04d9e18bea338e63
+SHA1: 93cc63c17caa6da7f0bce34e244f63cbf01f9455
+SHA256: 266195fc0adc2856c34cb6f9ea0253a02e91a3c8b3288350f38bf4a2f1d13e46
+Section: 去录屏截图检测
+Description: Neutralizes CALayer disableUpdateMask in the render server
+Author: 82flex
+Name: Unseen
+
 Package: com.dao.ccless
 Version: 2.1.0.1
 Architecture: iphoneos-arm64e
