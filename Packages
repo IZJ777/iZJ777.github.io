@@ -109,6 +109,23 @@ Author: 妖刀
 Name: CCLess++(RootHide)
 Sileodepiction: https://xiangfeidexiaohuo.github.io/sileodepiction/ccless/js.json
 
+Package: com.iZJ.SBLockhook
+Version: 1.0-1
+Architecture: iphoneos-arm64e
+Maintainer: wkk
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.iZJ.SBLockhook_1.0-1_iphoneos-arm64e.deb
+Size: 3416
+MD5sum: e50a539a34ae3db8c5ce0fdd0ce65eab
+SHA1: 35ca19c86bba4b51d57e89140179235eaffccb5f
+SHA256: c3639c7aed3e55a5cc6bc1e6b620b0faf0bbb54109131cb446d3b09424cea00f
+Section: 快捷开关手电筒
+Description: 长按锁屏键手机电筒(无论亮不亮屏都能触发)
+Author: wkk
+Icon: https://s1.imagehub.cc/images/2025/12/26/29fda3e52ac78c6958ecf3b5dac18673.png
+Name: 长按锁屏呼出手电筒
+
 Package: com.iZJ.folderpro
 Version: 0.0.1-39
 Architecture: iphoneos-arm64e
@@ -475,6 +492,21 @@ Section: 任务界面
 Description: 长按后台卡片清除所有后台、上滑黑名单等等，iZJ只用它的上滑黑名单功能。但是这个插件是netskao很久之前的，并且退网很久了，未适配roothide，即使转换为roothide安装能用，也大概率不定时安全模式或者手机卡死看门狗超时。
 Author: Netskao
 Name: KillApps-Rootless
+
+Package: oldabi
+Version: 0.3.1~4.f55e807
+Architecture: iphoneos-arm64e
+Maintainer: Evelyn
+Depends: mobilesubstrate, cy+cpu.arm64e, firmware (>= 15.0)
+Filename: ./debs/Legacy_0.3.1~4.f55e807_iphoneos-arm64e.deb
+Size: 13124
+MD5sum: b7955139db64e252776809c48b30a4e1
+SHA1: 7307058047c2baa3d24b0534a691a2a68b2e4e3b
+SHA256: 88c634db3c0fd7256178974495c38ecbfb596e3c073b115f18a19a056f6a215b
+Section: Tweak Injection
+Description: Support for legacy arm64e ABI in iOS 15.0+
+Author: Evelyn
+Name: Legacy arm64e Support
 
 Package: roothide.patches.filza
 Version: 0.5-4
