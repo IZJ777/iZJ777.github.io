@@ -135,16 +135,15 @@ Maintainer: SINI
 Installed-Size: 1524
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: ./debs/com.sini921.folderpro_0.0.1-39_iphoneos-arm64e.deb
-Size: 520784
-MD5sum: bda1d4bc725b708df4cfabfae5ea5892
-SHA1: 4ca965221cb9949b638bb98c1cd205e1499fadf7
-SHA256: c7100252656289c8bcfa12205ed98a32fa0d5581fe5cdacc48d60d9444992e91
-Section: 桌面布局
+Size: 521100
+MD5sum: 0d62459950a3366d718370a7c43b5b5e
+SHA1: 242c10c414c4451a00fcec1c00353b8fbc59c90e
+SHA256: 8e7e1aa6b83ce685b83f299bab9f4eaed9137887bcd7c5e128f3c64bfb2ebab3
+Section: 任务界面
 Description: 后台ipad网格切换界面，桌面文件夹布局各种功能(只有桌面文件夹里4*4等各种功能。没有桌面图标行列数量自定义功能，此功能用atria)。
 Author: SINI
 Icon: https://sini921.github.io/repo/sileodepiction/icon/folderpro.png
 Name: FolderPro(roothide)
-Sileodepiction: https://sini921.github.io/repo/sileodepiction/folderpro/js.json
 
 Package: com.sini921.morecomplications
 Version: 1.0-1
@@ -172,16 +171,15 @@ Installed-Size: 508
 Pre-Depends: rootless-compat(>= 0.9)
 Depends: mobilesubstrate (>= 0.9.5000)
 Filename: ./debs/com.sini921.quickappskill_0.0.1-9_iphoneos-arm64e.deb
-Size: 58432
-MD5sum: 4f83c6b38bb38e88003c37b76dfec83a
-SHA1: 60e493f3915f067637cb6ee68eea01dd757b4de7
-SHA256: b796d8697ce56c155dfcb12859c5327d2edd51c6a80a98c1caf01843e167c72b
+Size: 58544
+MD5sum: 2b0c206c8e0a1a3b072da05e8704a985
+SHA1: dc9065b07843c2ff2fefa004ed1d58d58713cb1a
+SHA256: bc947387467403729859d58465e15521677f7d2d6645c8409f854c49cb1ba39c
 Section: 任务界面
-Description: 在后台界面添加一个清除所有App的按钮，电话助手也有此功能，推荐电话助手。
+Description: 在后台界面添加一个清除所有App的按钮，电话助手也有此功能，推荐一直在维护的电话助手。
 Author: SINI
 Icon: https://sini921.github.io/repo/sileodepiction/icon/quickappskill.png
 Name: QuickAppsKill(rootless)
-Sileodepiction: https://sini921.github.io/repo/sileodepiction/quickappskill/js.json
 
 Package: com.tigisoftware.filza64bit
 Version: 4.0.1-4~roothide
